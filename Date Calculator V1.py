@@ -282,33 +282,6 @@ def CalculateAge(Name, date, years_until_next_leap_year):
                         else:
                                 print(Name, "was born today.")
         
-# Personal Dates #
-day = datetime.date(2005, 7, 4)
-day1 = datetime.date(2010, 3, 16)
-dB = datetime.date(2016, 11, 24)
-#ndudiKK = datetime.date(2017, 3, 16)
-#mcdonaldISF = datetime.date(2018, 3, 2)
-
-cw = datetime.date(2018, 10, 8)
-elp1 = datetime.date(2018, 10, 29)
-xmas = datetime.date(2018, 12, 21)
-cny = datetime.date(2019, 2, 1)
-easter = datetime.date(2019, 4, 13)
-avengers = datetime.date(2019, 5, 4)
-elp2 = datetime.date(2019, 5, 26)
-end = datetime.date(2019, 6, 13)
-grad = datetime.date(2023, 5, 26)
-
-CalculateAge("Matthew", day, 3)
-CalculateAge("Max", day1, 2)
-PastFuture("Code was made", dB, 4)
-print("-----------------------------------------")
-PastFuture("CW shows come back", cw, 2)
-PastFuture("ELP 1", elp1, 2)
-PastFuture("Christmas", xmas, 2)
-PastFuture("CNY", cny, 1)
-PastFuture("Easter", easter, 1)
-PastFuture("Avengers 4!", avengers, 1)
-PastFuture("ELP 2", elp2, 1)
-PastFuture("School End", end, 1)
-#PastFuture("High School Grad", grad, 1)
+# Test Date #
+date = datetime.date(2010, 1, 1)
+PastFuture("TestDate", date, 2)

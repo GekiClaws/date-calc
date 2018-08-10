@@ -121,21 +121,3 @@ def AgeTest(): #ask if date is for age or time (for user input)
 	else:
 		answer = False
 	Countdown(answer)
-
-# Personal Dates #
-Countdown(True, "Matthew", "2005-7-4")
-Countdown(True, "Max", "2010-3-16")
-Countdown(False, "Program conceptualized", "2016-11-24")
-Countdown(False, "Program written", "2018-8-10")
-#Countdown(False, "NdudiLeftKK", "2017-3-16")
-#Countdown(False, "McDonaldLeftISF", "2018-3-2")
-print("-----------------------------------------")
-Countdown(False, "CW Shows / Mid-term break", "2018-10-8")
-Countdown(False, "ELP 1", "2018-10-29")
-Countdown(False, "Christmas", "2018-12-21")
-Countdown(False, "CNY", "2019-2-1")
-Countdown(False, "Easter", "2019-4-13")
-Countdown(False, "Avengers 4!", "2019-5-4")
-Countdown(False, "ELP 2", "2019-5-26")
-Countdown(False, "School End", "2019-6-13")
-Countdown(False, "High School Grad", "2023-5-26")
