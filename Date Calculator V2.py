@@ -49,7 +49,10 @@ def Countdown(calcAge, name="", date=""):
 
 	#Analyze date and output y/m/d
 	if (userdate.month == 2) and (userdate.day == 29):
-		days -= 1
+		if pastORfuture == -1: 
+			days -= 1
+		else:
+			pass
 	while (pos[0] < pos[1]):
 		if pos[0] + relativedelta(years=1) > pos[1]:
 			if pos[0] + relativedelta(months=1) > pos[1]:
