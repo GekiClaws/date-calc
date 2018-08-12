@@ -106,6 +106,9 @@ def Countdown(calcAge, name="", date=""):
 		else:
 			pass
 
+		if mths == 0 or days == 0:
+			output = output[:-2]
+
 		return output
 
 	#Print y/m/d output
@@ -124,3 +127,5 @@ def AgeTest(): #ask if date is for age or time (for user input)
 	else:
 		answer = False
 	Countdown(answer)
+
+#Countdown(False, "Test", "2018-8-12")
