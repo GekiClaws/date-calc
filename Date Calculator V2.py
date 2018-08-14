@@ -5,6 +5,7 @@ from dateutil.relativedelta import relativedelta
 global today
 today = datetime.date.today()
 
+# Y/M/D Calculator
 def Countdown(calcAge, name="", date=""):
 	#Input or no
 	if date == "":
@@ -129,3 +130,36 @@ def AgeTest(): #ask if date is for age or time (for user input)
 	Countdown(answer)
 
 #Countdown(False, "Test", "2018-8-12")
+
+
+# Percentage calculator (of today % in terms of progress between two dates)
+def PercentCount(date1="", date2="", rounder=""):
+	# Input or no
+	if (date1 == ""): #User input mode
+		dates = []
+		for x in range(1, 3):
+			dateValid = False
+			while not dateValid:
+				userinput = input("Date"+str(x)+" (yyyy-mm-dd):")
+				try:
+					userdate = datetime.datetime.strptime(userinput, "%Y-%m-%d").date()
+					dateValid = True
+					dates.append(userdate)
+					break
+				except:
+					print("Try again!")
+		date1 = dates[0]
+		date2 = dates[1]
+	else:
+		date1 = datetime.datetime.strptime(date1, "%Y-%m-%d").date()
+		date2 = datetime.datetime.strptime(date2, "%Y-%m-%d").date()
+
+	current_days = (today-date1).days
+	total_days = (date2-date1).days
+	if rounder == "":
+		percentage = round(current_days/total_days, 2)
+	else:
+		percentage = round(current_days/total_days, int(rounder))
+
+	print(str(percentage)+"%")
+	
