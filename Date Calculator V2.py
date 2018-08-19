@@ -157,9 +157,9 @@ def PercentCount(date1="", date2="", rounder=""):
 	current_days = (today-date1).days
 	total_days = (date2-date1).days
 	if rounder == "":
-		percentage = round(current_days/total_days, 2)
+		percentage = round(current_days/total_days, 2) * 100
 	else:
-		percentage = round(current_days/total_days, int(rounder))
+		percentage = round(current_days/total_days, int(rounder)) * 100
 
 	print(str(percentage)+"%")
 	
